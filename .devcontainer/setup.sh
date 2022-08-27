@@ -12,4 +12,3 @@ rustup component add clippy --toolchain nightly
 rustup install nightly-2022-02-15
 rustup default nightly-2022-02-15
 rustup target add wasm32-unknown-unknown
-Footer
