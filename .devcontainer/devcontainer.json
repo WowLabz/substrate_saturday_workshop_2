@@ -3,12 +3,19 @@
   "context": "..",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash",
-    "lldb.executable": "/usr/bin/lldb"
+    "lldb.executable": "/usr/bin/lldb",
+    "editor.formatOnSave": true,
+    "files.exclude": {
+		"**/CODE_OF_CONDUCT.md": true,
+		"**/LICENSE": true
+	}
   },
   "extensions": [
-    "rust-lang.rust",
+    "rust-lang.rust-analyzer",
     "bungcip.better-toml",
-    "vadimcn.vscode-lldb"
+    "vadimcn.vscode-lldb",
+    "serayuzgur.crates",
+    "vscodevim.vim",
   ],
   "forwardPorts": [
     3000,
@@ -21,5 +28,6 @@
      "label": "Open PolkadotJS Apps",
      "type": "external-preview",
      "args": ["https://polkadot.js.org/apps/?rpc=wss%3A%2F%2F/$HOST/wss"]}
-  ]
+  ],
+  "dockerFile": "Dockerfile"
 }
