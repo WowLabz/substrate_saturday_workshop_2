@@ -35,8 +35,8 @@ pub use frame_support::{
 	},
 	StorageValue,
 };
-use frame_system::EnsureRoot;
 pub use frame_system::Call as SystemCall;
+use frame_system::EnsureRoot;
 pub use pallet_balances::Call as BalancesCall;
 pub use pallet_timestamp::Call as TimestampCall;
 use pallet_transaction_payment::CurrencyAdapter;
@@ -298,6 +298,10 @@ impl pallet_template::Config for Runtime {
 	type Event = Event;
 }
 
+impl camp_assets::Config for Runtime {
+	type Event = Event;
+}
+
 // Create the runtime by composing the FRAME pallets that were previously configured.
 construct_runtime!(
 	pub struct Runtime
@@ -317,6 +321,7 @@ construct_runtime!(
 		// Include the custom logic from the pallet-template in the runtime.
 		TemplateModule: pallet_template,
 		Assets: pallet_assets,
+		CampAssets: camp_assets,
 	}
 );
 

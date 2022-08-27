@@ -626,6 +626,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "camp-assets"
+version = "4.0.0-dev"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "pallet-assets",
+ "pallet-balances",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+]
+
+[[package]]
 name = "cargo-platform"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3782,6 +3798,7 @@ dependencies = [
 name = "node-template-runtime"
 version = "4.0.0-dev"
 dependencies = [
+ "camp-assets",
  "frame-benchmarking",
  "frame-executive",
  "frame-support",
